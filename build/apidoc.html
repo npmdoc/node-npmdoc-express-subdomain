@@ -61,12 +61,128 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.express-subdomain">module express-subdomain</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-subdomain.express-subdomain">
+            function <span class="apidocSignatureSpan"></span>express-subdomain
+            <span class="apidocSignatureSpan">(subdomain, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-subdomain.toString">
+            function <span class="apidocSignatureSpan">express-subdomain.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-subdomain.toString">module express-subdomain.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-subdomain.toString.toString">
+            function <span class="apidocSignatureSpan">express-subdomain.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.express-subdomain" id="apidoc.module.express-subdomain">module express-subdomain</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-subdomain.express-subdomain" id="apidoc.element.express-subdomain.express-subdomain">
+        function <span class="apidocSignatureSpan"></span>express-subdomain
+        <span class="apidocSignatureSpan">(subdomain, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">express-subdomain = function (subdomain, fn) {
+  if(!subdomain || typeof subdomain !== &#x22;string&#x22;) {
+    throw new Error(&#x22;The first parameter must be a string representing the subdomain&#x22;);
+  }
+
+  //check fn handles three params..
+  if(!fn || typeof fn !== &#x22;function&#x22; || fn.length &#x3c; 3) {
+      throw new Error(&#x22;The second parameter must be a function that handles fn(req, res, next) params.&#x22;);
+  }
+
+  return function (req, res, next) {
+    req._subdomainLevel = req._subdomainLevel || 0;
+
+    var subdomainSplit = subdomain.split(&#x27;.&#x27;);
+    var len = subdomainSplit.length;
+    var match = true;
+
+    //url - v2.api.example.dom
+    //subdomains == [&#x27;api&#x27;, &#x27;v2&#x27;]
+    //subdomainSplit = [&#x27;v2&#x27;, &#x27;api&#x27;]
+    for(var i = 0; i &#x3c; len; i++) {
+      var expected = subdomainSplit[len - (i+1)];
+      var actual = req.subdomains[i+req._subdomainLevel];
+
+      if(expected === &#x27;*&#x27;) { continue; }
+
+      if(actual !== expected) {
+          match = false;
+          break;
+      }
+    }
+
+    if(match) {
+      req._subdomainLevel++;//enables chaining
+      return fn(req, res, next);
+    }
+    next();
+  };
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-subdomain.toString" id="apidoc.element.express-subdomain.toString">
+        function <span class="apidocSignatureSpan">express-subdomain.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-subdomain.toString" id="apidoc.module.express-subdomain.toString">module express-subdomain.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-subdomain.toString.toString" id="apidoc.element.express-subdomain.toString.toString">
+        function <span class="apidocSignatureSpan">express-subdomain.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

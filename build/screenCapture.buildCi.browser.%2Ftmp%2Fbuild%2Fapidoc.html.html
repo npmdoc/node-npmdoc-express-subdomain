@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/bmullan91/express-subdomain#readme"
-
-    >express-subdomain (v1.0.5)</a>
+    <a href="https://github.com/bmullan91/express-subdomain#readme">express-subdomain (v1.0.5)</a>
 </h1>
 <h4>Simple and lightweight middleware to handle subdomains</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.express-subdomain">module express-subdomain</a><ol>
 
@@ -108,30 +101,30 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">express-subdomain = function (subdomain, fn) {
-  if(!subdomain || typeof subdomain !== &#x22;string&#x22;) {
-    throw new Error(&#x22;The first parameter must be a string representing the subdomain&#x22;);
+  if(!subdomain || typeof subdomain !== "string") {
+    throw new Error("The first parameter must be a string representing the subdomain");
   }
 
   //check fn handles three params..
-  if(!fn || typeof fn !== &#x22;function&#x22; || fn.length &#x3c; 3) {
-      throw new Error(&#x22;The second parameter must be a function that handles fn(req, res, next) params.&#x22;);
+  if(!fn || typeof fn !== "function" || fn.length &lt; 3) {
+      throw new Error("The second parameter must be a function that handles fn(req, res, next) params.");
   }
 
   return function (req, res, next) {
     req._subdomainLevel = req._subdomainLevel || 0;
 
-    var subdomainSplit = subdomain.split(&#x27;.&#x27;);
+    var subdomainSplit = subdomain.split('.');
     var len = subdomainSplit.length;
     var match = true;
 
     //url - v2.api.example.dom
-    //subdomains == [&#x27;api&#x27;, &#x27;v2&#x27;]
-    //subdomainSplit = [&#x27;v2&#x27;, &#x27;api&#x27;]
-    for(var i = 0; i &#x3c; len; i++) {
+    //subdomains == ['api', 'v2']
+    //subdomainSplit = ['v2', 'api']
+    for(var i = 0; i &lt; len; i++) {
       var expected = subdomainSplit[len - (i+1)];
       var actual = req.subdomains[i+req._subdomainLevel];
 
-      if(expected === &#x27;*&#x27;) { continue; }
+      if(expected === '*') { continue; }
 
       if(actual !== expected) {
           match = false;
@@ -192,3 +185,4 @@
     ]
 </div>
 </div>
+</body></html>
