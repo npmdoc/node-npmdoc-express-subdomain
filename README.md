@@ -1,9 +1,14 @@
-# api documentation for  [express-subdomain (v1.0.5)](https://github.com/bmullan91/express-subdomain#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-express-subdomain.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-express-subdomain) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-express-subdomain.svg)](https://travis-ci.org/npmdoc/node-npmdoc-express-subdomain)
+# npmdoc-express-subdomain
+
+#### api documentation for  [express-subdomain (v1.0.5)](https://github.com/bmullan91/express-subdomain#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-express-subdomain.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-express-subdomain) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-express-subdomain.svg)](https://travis-ci.org/npmdoc/node-npmdoc-express-subdomain)
+
 #### Simple and lightweight middleware to handle subdomains
 
-[![NPM](https://nodei.co/npm/express-subdomain.png?downloads=true)](https://www.npmjs.com/package/express-subdomain)
+[![NPM](https://nodei.co/npm/express-subdomain.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/express-subdomain)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-express-subdomain/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-express-subdomain_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-express-subdomain/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-express-subdomain/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-express-subdomain/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-express-subdomain/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-express-subdomain/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-express-subdomain/build/screenCapture.npmPackageListing.svg)
 
@@ -17,8 +22,7 @@
 
 {
     "author": {
-        "name": "Brian Mullan",
-        "email": "bmullan91@gmail.com"
+        "name": "Brian Mullan"
     },
     "bugs": {
         "url": "https://github.com/bmullan91/express-subdomain/issues"
@@ -52,13 +56,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "bmullan91",
-            "email": "bmullan91@gmail.com"
+            "name": "bmullan91"
         }
     ],
     "name": "express-subdomain",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/bmullan91/express-subdomain.git"
@@ -70,16 +72,6 @@
     "version": "1.0.5"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module express-subdomain](#apidoc.module.express-subdomain)
-
-
-
-# <a name="apidoc.module.express-subdomain"></a>[module express-subdomain](#apidoc.module.express-subdomain)
 
 
 
