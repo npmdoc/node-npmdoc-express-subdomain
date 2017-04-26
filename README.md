@@ -1,6 +1,6 @@
 # npmdoc-express-subdomain
 
-#### api documentation for  [express-subdomain (v1.0.5)](https://github.com/bmullan91/express-subdomain#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-express-subdomain.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-express-subdomain) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-express-subdomain.svg)](https://travis-ci.org/npmdoc/node-npmdoc-express-subdomain)
+#### basic api documentation for  [express-subdomain (v1.0.5)](https://github.com/bmullan91/express-subdomain#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-express-subdomain.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-express-subdomain) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-express-subdomain.svg)](https://travis-ci.org/npmdoc/node-npmdoc-express-subdomain)
 
 #### Simple and lightweight middleware to handle subdomains
 
@@ -69,7 +69,8 @@
         "coverage": "./test/pre-script.sh; istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage; ./test/post-script.sh",
         "test": "./test/pre-script.sh; ./node_modules/.bin/mocha --reporter spec; ./test/post-script.sh"
     },
-    "version": "1.0.5"
+    "version": "1.0.5",
+    "bin": {}
 }
 ```
 
